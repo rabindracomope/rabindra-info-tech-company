@@ -1,0 +1,149 @@
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.list-group-item {
+    border-left: none;
+    border-right: none;
+}
+
+.entry-item {
+    transition: all 0.2s;
+}
+
+.entry-item:hover {
+    background-color: #f8f9fa;
+}
+
+.entry-thumbnail {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.video-thumbnail {
+    position: relative;
+}
+
+.video-thumbnail::after {
+    content: "▶";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.file-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.pdf-icon {
+    color: #e74a3b;
+}
+
+.word-icon {
+    color: #2b579a;
+}
+
+.text-icon {
+    color: #6c757d;
+}
+
+.tag-badge {
+    margin-right: 5px;
+    background-color: var(--info-color);
+    color: white;
+}
+
+#calendar {
+    font-family: Arial, sans-serif;
+}
+
+#calendar .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#calendar .calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+#calendar .calendar-day-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+#calendar .calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+#calendar .calendar-date {
+    text-align: center;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#calendar .calendar-date:hover {
+    background-color: #e9ecef;
+}
+
+#calendar .calendar-date.today {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#calendar .calendar-date.selected {
+    background-color: var(--info-color);
+    color: white;
+}
+
+#calendar .calendar-date.has-entries {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .entry-thumbnail {
+        width: 60px;
+        height: 45px;
+    }
+    
+    .file-icon {
+        font-size: 1.5rem;
+    }
+}
